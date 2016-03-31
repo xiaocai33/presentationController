@@ -9,6 +9,17 @@
 #import "ViewController.h"
 #import "FirstViewController.h"
 
+typedef enum{
+    /** 自下而上 */
+    btnTypeCoverVertical = 0,
+    /** 中心翻转效果 */
+    btnTypeFlipHorizontal,
+    /** 淡出效果 */
+    btnTypeCrossDissolve,
+    /** 上下翻页效果 */
+    btnTypePartialCurl
+} btnType;
+
 @interface ViewController ()
 
 @end
@@ -22,31 +33,19 @@
     
     //添加按钮
     //自下而上
-    UIButton *coverVerticalBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [coverVerticalBtn addTarget:self action:@selector(coverVerticalBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [coverVerticalBtn setTitle:@"自下而上" forState:UIControlStateNormal];
-    [coverVerticalBtn setBackgroundColor:[UIColor blueColor]];
+    UIButton *coverVerticalBtn = [self addBtnWithTitle:@"自下而上" buttonType:btnTypeCoverVertical];
     [self.view addSubview:coverVerticalBtn];
     
     //中心翻转效果
-    UIButton *flipHorizontalBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [flipHorizontalBtn addTarget:self action:@selector(flipHorizontalBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [flipHorizontalBtn setTitle:@"中心翻转" forState:UIControlStateNormal];
-    [flipHorizontalBtn setBackgroundColor:[UIColor blueColor]];
+    UIButton *flipHorizontalBtn = [self addBtnWithTitle:@"中心翻转"  buttonType:btnTypeFlipHorizontal];
     [self.view addSubview:flipHorizontalBtn];
     
     //淡出效果
-    UIButton *crossDissolveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [crossDissolveBtn addTarget:self action:@selector(crossDissolveBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [crossDissolveBtn setTitle:@"淡出效果" forState:UIControlStateNormal];
-    [crossDissolveBtn setBackgroundColor:[UIColor blueColor]];
+    UIButton *crossDissolveBtn = [self addBtnWithTitle:@"淡出效果"  buttonType:btnTypeCrossDissolve];
     [self.view addSubview:crossDissolveBtn];
     
     //上下翻页效果
-    UIButton *partialCurlBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [partialCurlBtn addTarget:self action:@selector(partialCurlBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [partialCurlBtn setTitle:@"上下翻页" forState:UIControlStateNormal];
-    [partialCurlBtn setBackgroundColor:[UIColor blueColor]];
+    UIButton *partialCurlBtn = [self addBtnWithTitle:@"上下翻页"  buttonType:btnTypePartialCurl];
     [self.view addSubview:partialCurlBtn];
     
     //禁止autoresizing功能
@@ -77,6 +76,20 @@
 
 }
 
+//重构代码
+- (UIButton *)addBtnWithTitle:(NSString *)title buttonType:(btnType)type{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [btn setTitle:title forState:UIControlStateNormal];
+    btn.tag = type;
+    
+    [btn setBackgroundColor:[UIColor blueColor]];
+    
+    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    return btn;
+}
+
 //实现按钮点击事件
 /*
  UIModalTransitionStyleCoverVertical 默认效果:自下而上
@@ -85,49 +98,31 @@
  UIModalTransitionStylePartialCurl 上下翻页效果
  */
 
-- (void)coverVerticalBtnClick:(UIButton *)btn{
+- (void)btnClick:(UIButton *)btn{
     FirstViewController *firstVc = [[FirstViewController alloc] init];
     
     firstVc.name = btn.titleLabel.text;
     
-    [self presentViewController:firstVc animated:YES completion:nil];
-    
-}
-
-- (void)flipHorizontalBtnClick:(UIButton *)btn{
-    FirstViewController *firstVc = [[FirstViewController alloc] init];
-    
-    firstVc.name = btn.titleLabel.text;
-    
-    firstVc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    
-    [self presentViewController:firstVc animated:YES completion:nil];
-    
-}
-
-- (void)crossDissolveBtnClick:(UIButton *)btn{
-    FirstViewController *firstVc = [[FirstViewController alloc] init];
-    
-    firstVc.name = btn.titleLabel.text;
-    
-    firstVc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    switch (btn.tag) {
+        case btnTypeCoverVertical:
+            firstVc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+            break;
+        case btnTypeFlipHorizontal:
+            firstVc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+            break;
+        case btnTypeCrossDissolve:
+            firstVc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            break;
+        case btnTypePartialCurl:
+            firstVc.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+            break;
+            
+        default:
+            break;
+    }
     
     [self presentViewController:firstVc animated:YES completion:nil];
-    
 }
-
-- (void)partialCurlBtnClick:(UIButton *)btn{
-    FirstViewController *firstVc = [[FirstViewController alloc] init];
-    
-    firstVc.name = btn.titleLabel.text;
-    
-    firstVc.modalTransitionStyle = UIModalTransitionStylePartialCurl;
-    
-    [self presentViewController:firstVc animated:YES completion:nil];
-    
-}
-
-
 
 
 @end
