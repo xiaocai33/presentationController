@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3388F1101CAD6B0300C8736E /* AnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388F1081CAD6B0300C8736E /* AnimatedTransitioning.m */; };
+		3388F1111CAD6B0300C8736E /* PresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388F10A1CAD6B0300C8736E /* PresentationController.m */; };
+		3388F1121CAD6B0300C8736E /* TransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388F10D1CAD6B0300C8736E /* TransitionDelegate.m */; };
+		3388F1131CAD6B0300C8736E /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388F10F1CAD6B0300C8736E /* UIView+Extension.m */; };
 		33EA3B4D1CACEDFE005391B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EA3B4C1CACEDFE005391B6 /* main.m */; };
 		33EA3B501CACEDFE005391B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EA3B4F1CACEDFE005391B6 /* AppDelegate.m */; };
 		33EA3B531CACEDFE005391B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EA3B521CACEDFE005391B6 /* ViewController.m */; };
@@ -36,6 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3388F1071CAD6B0300C8736E /* AnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTransitioning.h; sourceTree = "<group>"; };
+		3388F1081CAD6B0300C8736E /* AnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedTransitioning.m; sourceTree = "<group>"; };
+		3388F1091CAD6B0300C8736E /* PresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationController.h; sourceTree = "<group>"; };
+		3388F10A1CAD6B0300C8736E /* PresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationController.m; sourceTree = "<group>"; };
+		3388F10B1CAD6B0300C8736E /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		3388F10C1CAD6B0300C8736E /* TransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionDelegate.h; sourceTree = "<group>"; };
+		3388F10D1CAD6B0300C8736E /* TransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionDelegate.m; sourceTree = "<group>"; };
+		3388F10E1CAD6B0300C8736E /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		3388F10F1CAD6B0300C8736E /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		33EA3B481CACEDFE005391B6 /* modalTransitionStyleAndVFL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = modalTransitionStyleAndVFL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33EA3B4C1CACEDFE005391B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		33EA3B4E1CACEDFE005391B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +94,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3388F1061CAD6B0300C8736E /* modal */ = {
+			isa = PBXGroup;
+			children = (
+				3388F1071CAD6B0300C8736E /* AnimatedTransitioning.h */,
+				3388F1081CAD6B0300C8736E /* AnimatedTransitioning.m */,
+				3388F1091CAD6B0300C8736E /* PresentationController.h */,
+				3388F10A1CAD6B0300C8736E /* PresentationController.m */,
+				3388F10B1CAD6B0300C8736E /* Singleton.h */,
+				3388F10C1CAD6B0300C8736E /* TransitionDelegate.h */,
+				3388F10D1CAD6B0300C8736E /* TransitionDelegate.m */,
+				3388F10E1CAD6B0300C8736E /* UIView+Extension.h */,
+				3388F10F1CAD6B0300C8736E /* UIView+Extension.m */,
+			);
+			path = modal;
+			sourceTree = "<group>";
+		};
 		33EA3B3F1CACEDFE005391B6 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +133,7 @@
 		33EA3B4A1CACEDFE005391B6 /* modalTransitionStyleAndVFL */ = {
 			isa = PBXGroup;
 			children = (
+				3388F1061CAD6B0300C8736E /* modal */,
 				33EA3B7E1CACEF12005391B6 /* FirstViewController.h */,
 				33EA3B7F1CACEF12005391B6 /* FirstViewController.m */,
 				33EA3B4E1CACEDFE005391B6 /* AppDelegate.h */,
@@ -277,8 +307,12 @@
 			files = (
 				33EA3B531CACEDFE005391B6 /* ViewController.m in Sources */,
 				33EA3B501CACEDFE005391B6 /* AppDelegate.m in Sources */,
+				3388F1101CAD6B0300C8736E /* AnimatedTransitioning.m in Sources */,
+				3388F1121CAD6B0300C8736E /* TransitionDelegate.m in Sources */,
 				33EA3B4D1CACEDFE005391B6 /* main.m in Sources */,
 				33EA3B801CACEF12005391B6 /* FirstViewController.m in Sources */,
+				3388F1131CAD6B0300C8736E /* UIView+Extension.m in Sources */,
+				3388F1111CAD6B0300C8736E /* PresentationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +536,7 @@
 				33EA3B771CACEDFE005391B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33EA3B781CACEDFE005391B6 /* Build configuration list for PBXNativeTarget "modalTransitionStyleAndVFLTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +545,7 @@
 				33EA3B7A1CACEDFE005391B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33EA3B7B1CACEDFE005391B6 /* Build configuration list for PBXNativeTarget "modalTransitionStyleAndVFLUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +554,7 @@
 				33EA3B7D1CACEDFE005391B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
