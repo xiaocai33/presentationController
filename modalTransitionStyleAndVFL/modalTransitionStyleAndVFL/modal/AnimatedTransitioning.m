@@ -23,18 +23,21 @@ const NSTimeInterval duration = 1.0;
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
     if (self.presented) {//创建控制器
         UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
-        //toView.layer.transform = CATransform3DMakeRotation(M_PI_2, 1, 1, 0);3D动画
+        //toView.layer.transform = CATransform3DMakeRotation(M_PI_2, 1, 1, 1);3D动画
         //toView.y = -toView.height;
         toView.x = toView.width;
         [UIView animateWithDuration:duration animations:^{
+            //toView.layer.transform = CATransform3DIdentity;3D动画
             //toView.y = 0;
-            toView.x = 0;
+            toView.x = 40;//注意同PresentationController设置的尺寸位置相关
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:YES];
         }];
     }else{//销毁控制器
         [UIView animateWithDuration:duration animations:^{
             UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
+            //fromView.layer.transform = CATransform3DMakeRotation(M_PI_2, 1, 1, 1);
+            //fromView.y = -fromView.height;
             fromView.x = -fromView.width;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:YES];

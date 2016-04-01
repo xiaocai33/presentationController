@@ -97,13 +97,13 @@
 		3388F1061CAD6B0300C8736E /* modal */ = {
 			isa = PBXGroup;
 			children = (
-				3388F1071CAD6B0300C8736E /* AnimatedTransitioning.h */,
-				3388F1081CAD6B0300C8736E /* AnimatedTransitioning.m */,
-				3388F1091CAD6B0300C8736E /* PresentationController.h */,
-				3388F10A1CAD6B0300C8736E /* PresentationController.m */,
-				3388F10B1CAD6B0300C8736E /* Singleton.h */,
 				3388F10C1CAD6B0300C8736E /* TransitionDelegate.h */,
 				3388F10D1CAD6B0300C8736E /* TransitionDelegate.m */,
+				3388F1091CAD6B0300C8736E /* PresentationController.h */,
+				3388F10A1CAD6B0300C8736E /* PresentationController.m */,
+				3388F1071CAD6B0300C8736E /* AnimatedTransitioning.h */,
+				3388F1081CAD6B0300C8736E /* AnimatedTransitioning.m */,
+				3388F10B1CAD6B0300C8736E /* Singleton.h */,
 				3388F10E1CAD6B0300C8736E /* UIView+Extension.h */,
 				3388F10F1CAD6B0300C8736E /* UIView+Extension.m */,
 			);

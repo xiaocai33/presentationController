@@ -17,21 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="启动页请稍等" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTX-ZQ-UeN">
-                                <rect key="frame" x="219" y="290" width="127" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="E6m-Nj-dR0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="启动页请稍等" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTX-ZQ-UeN">
+                                <rect key="frame" x="237" y="290" width="127" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="DId-fg-Ad0"/>
                                     <constraint firstAttribute="width" constant="127" id="PB8-EF-P5g"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.92772478110000001" blue="0.46868214520000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.92772478110000001" blue="0.46868214520000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qTX-ZQ-UeN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ABg-i3-LkY"/>
+                            <constraint firstItem="E6m-Nj-dR0" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="XAX-pC-WNq"/>
+                            <constraint firstAttribute="bottom" secondItem="E6m-Nj-dR0" secondAttribute="bottom" id="XbU-tj-GiJ"/>
+                            <constraint firstItem="E6m-Nj-dR0" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="btN-KA-FDH"/>
                             <constraint firstItem="qTX-ZQ-UeN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="kAc-3I-xPM"/>
+                            <constraint firstAttribute="trailing" secondItem="E6m-Nj-dR0" secondAttribute="trailing" id="y3U-11-vGH"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -40,4 +47,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="2" width="1024" height="768"/>
+    </resources>
 </document>

@@ -32,7 +32,23 @@ typedef enum{
 - (void)viewDidLoad {
     [super viewDidLoad];
     //添加按钮,实现自动布局
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = [UIColor clearColor];
+    
+    //添加背景图片
+    UIImageView *imageV = [[UIImageView alloc] init];
+    imageV.image = [UIImage imageNamed:@"1.jpg"];
+    [self.view addSubview:imageV];
+    
+    imageV.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    //自动布局
+    //X 和 宽度
+    NSArray *imageXW = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[imageV]-0-|" options:0 metrics:nil views:@{@"imageV":imageV}];
+    [self.view addConstraints:imageXW];
+    
+    //Y 和 高度
+    NSArray *imageYH = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[imageV]-0-|" options:0 metrics:nil views:@{@"imageV":imageV}];
+    [self.view addConstraints:imageYH];
     
     //添加按钮
     //自下而上
