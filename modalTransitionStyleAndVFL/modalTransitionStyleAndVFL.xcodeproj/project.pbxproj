@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		335EEB841CB14EFE00214E2C /* presentation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 335EEB831CB14EFE00214E2C /* presentation.gif */; };
 		3388F1101CAD6B0300C8736E /* AnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388F1081CAD6B0300C8736E /* AnimatedTransitioning.m */; };
 		3388F1111CAD6B0300C8736E /* PresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388F10A1CAD6B0300C8736E /* PresentationController.m */; };
 		3388F1121CAD6B0300C8736E /* TransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3388F10D1CAD6B0300C8736E /* TransitionDelegate.m */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		335EEB831CB14EFE00214E2C /* presentation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = presentation.gif; sourceTree = "<group>"; };
 		3388F1071CAD6B0300C8736E /* AnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTransitioning.h; sourceTree = "<group>"; };
 		3388F1081CAD6B0300C8736E /* AnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedTransitioning.m; sourceTree = "<group>"; };
 		3388F1091CAD6B0300C8736E /* PresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationController.h; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		335EEB821CB14EFE00214E2C /* image */ = {
+			isa = PBXGroup;
+			children = (
+				335EEB831CB14EFE00214E2C /* presentation.gif */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
 		3388F1061CAD6B0300C8736E /* modal */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +143,7 @@
 		33EA3B4A1CACEDFE005391B6 /* modalTransitionStyleAndVFL */ = {
 			isa = PBXGroup;
 			children = (
+				335EEB821CB14EFE00214E2C /* image */,
 				3388F1061CAD6B0300C8736E /* modal */,
 				33EA3B7E1CACEF12005391B6 /* FirstViewController.h */,
 				33EA3B7F1CACEF12005391B6 /* FirstViewController.m */,
@@ -278,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				335EEB841CB14EFE00214E2C /* presentation.gif in Resources */,
 				33EA3B5B1CACEDFE005391B6 /* LaunchScreen.storyboard in Resources */,
 				33EA3B581CACEDFE005391B6 /* Assets.xcassets in Resources */,
 				33EA3B561CACEDFE005391B6 /* Main.storyboard in Resources */,

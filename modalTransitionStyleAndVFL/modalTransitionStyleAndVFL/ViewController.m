@@ -68,7 +68,7 @@ typedef enum{
     [self.view addSubview:partialCurlBtn];
     
     //自定义翻页效果
-    UIButton *customBtn = [self addBtnWithTitle:@"自定义左右翻页"  buttonType:btnTypeCustom];
+    UIButton *customBtn = [self addBtnWithTitle:@"自定义翻页"  buttonType:btnTypeCustom];
     [self.view addSubview:customBtn];
 
     
