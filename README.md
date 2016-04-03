@@ -15,4 +15,7 @@ modal转场动画:
  2.实现自定义翻页动画效果
  
   可以在AnimatedTransitioning.m类中,修改- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext方法中的动画效果即可完成相应的动画
+  
+  效果展示:
+  
 ![image](https://github.com/xiaocai33/presentationController/blob/master/modalTransitionStyleAndVFL/modalTransitionStyleAndVFL/image/presentation.gif)
